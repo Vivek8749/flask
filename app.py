@@ -6,9 +6,9 @@ app = Flask(__name__)
 def hello():
     return "Hello"
 
-@app.route('/vivek')
-def hello_vivek():
-    return "Hello Vivek"
+@app.route('/<name>')
+def hello_name(name):
+    return f"Hello {name}"
 
 if __name__ == '__main__':
     app.run(debug=True)
